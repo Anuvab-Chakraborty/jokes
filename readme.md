@@ -1,4 +1,4 @@
-# [Random Jokes Website]("https://anuvab-chakraborty.github.io/jokes/")
+# [Random Jokes Website](https://anuvab-chakraborty.github.io/jokes/)
 
 This website generates random jokes from a variety of sources, including a static array of jokes and an API.
 
