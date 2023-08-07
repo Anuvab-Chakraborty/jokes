@@ -1,4 +1,3 @@
-
 .headings{
     display: flex;
     align-items: center;
@@ -6,14 +5,96 @@
     flex-direction: column;
     padding: 10px;
     gap:5px;
-}
-
-.jokes{
+  }
+  
+  /* Styling for the headings */
+  .jokes-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #f00;
+  }
+  
+  /* Styling for the jokes containers */
+  .jokes {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0;
     flex-direction: column;
-    padding: 10px;
-    gap:5px;
-    
-}
+    margin-top: 20px;
+    perspective: 800px;
+  }
+  
+  /* Apply 3D effect directly to the .apijk and .arrjk elements */
+  .apijk,
+  .arrjk {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #FFA500, #FF0000, #800080);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .apijk h2,
+  .arrjk h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #f8e71c; /* Bright yellow color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+    transition: transform 0.3s, text-shadow 0.3s;
+  }
+  
+  .apijk p,
+  .arrjk p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+  }
+  
+  /* Hover effect on the .apijk and .arrjk elements */
+  .apijk:hover,
+  .arrjk:hover {
+    transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .apijk:hover h2,
+  .arrjk:hover h2 {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); /* Enhanced text shadow on hover */
+  }
+  
+  /* Styling for the joke text */
+  .joke-text {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #f8e71c; /* Initial color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow */
+    transition: text-shadow 0.3s, color 0.3s; /* Add color transition */
+    animation: colorTransition 5s infinite alternate; /* Color transition animation */
+  }
+  
+  /* Animation for color transition */
+  @keyframes colorTransition {
+    0% {
+        color: #356ae4; /* Initial color */
+    }
+    50% {
+        color: #05a908; /* Mid-transition color */
+    }
+    100% {
+        color: #00000000; /* Final color */
+    }
+  }
+  
